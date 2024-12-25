@@ -4,11 +4,15 @@
 $codeblock-caption-bg ?= rgba(200, 200, 200, .15)
 
 figure.highlight
+    background: #1e1e1e
+    border: 1px solid #333
+    border-radius: 4px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+    margin-bottom: 1rem
     padding: 0
     width: 100%
     position: relative
     margin: 1em 0 1em !important
-    border-radius: $radius
 
     &.folded
         .highlight-body
@@ -33,21 +37,57 @@ figure.highlight
         tr:not(:last-child) td
             padding-bottom: 0
 
+    .hljs
+        color: #e7e7e7
+        background: #000000
+
+    .hljs-keyword
+        color: #569cd6
+
+    .hljs-string
+        color: #ce9178
+
+    .hljs-comment
+        color: #6a9955
+
+    .hljs-function
+        color: #dcdcaa
+
+    .hljs-number
+        color: #b5cea8
+
+    .hljs-class
+        color: #4ec9b0
+
+    .hljs-variable
+        color: #9cdcfe
+
+    .hljs-operator
+        color: #d4d4d4
+
+    .hljs-built_in
+        color: #4ec9b0
+
+    .hljs-property
+        color: #9cdcfe
+
     pre
         padding: 0
         overflow: visible
+        background-color: transparent
 
         .line, code .hljs
             line-height: 1.5rem
 
-    figcaption, .gutter
-        background: $codeblock-caption-bg
-
     figcaption
+        background: #252525
+        padding: 0.3em 0.75em
+        text-align: left
+        font-size: 0.8em
+        color: #e4e4e4
+        border-bottom: 1px solid #333
+        border-radius: 4px 4px 0 0
         margin: 0 !important
-        padding: .3em 0em .3em .75em
-        font-style: normal
-        font-size: .8em
 
         *
             color: inherit
@@ -63,6 +103,7 @@ figure.highlight
             margin-left: .5em
 
         .fold
+            margin-right: 0.75em
             cursor: pointer
 
         &.level
@@ -73,22 +114,28 @@ figure.highlight
                     padding: 0em .75em
 
     .highlight-body
-        overflow: auto
+        background: #1e1e1e
+        border-radius: 0 0 4px 4px
+        overflow: hidden
 
     .gutter
-        text-align: right
+        background: #252525
+        border-right: 1px solid #333
+        padding: 0.3em 0.5em
+        color: #7a7a7a
+        user-select: none
 
-    .tag, .title, .number, .section
-        display: inherit
-        font: inherit
-        margin: inherit
-        padding: inherit
-        background: inherit
-        height: inherit
-        text-align: inherit
-        vertical-align: inherit
-        min-width: inherit
-        border-radius: inherit
+        pre
+            color: #7a7a7a
+            background: transparent
+
+    .code
+        width: 100%
+
+        pre
+            padding: 0 0.75em
+            color: #e7e7e7
+            background: transparent
 
 figure.highlight.foldable
   div.level-left

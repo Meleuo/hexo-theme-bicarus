@@ -27,7 +27,7 @@ class Footer extends Component {
             footerLogo = siteTitle;
         }
 
-        return <footer class="footer">
+        return <footer class="footer" style="padding-bottom: 3rem;">
             <div class="container">
                 <div class="level">
                     <div class="level-start">
@@ -37,7 +37,7 @@ class Footer extends Component {
                         <p class="is-size-7">
                             <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
-                            <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                            <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>&nbsp;&nbsp;
                             {showVisitorCounter ? <br /> : null}
                             {showVisitorCounter ? <span id="busuanzi_container_site_uv"
                                 dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}

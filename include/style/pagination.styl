@@ -1,28 +1,32 @@
 /* ---------------------------------
- *  Pagination and Post Navigation
+ *           Pagination
  * --------------------------------- */
-$pagination-box-shadow ?= $card-shadow
-$pagination-background-color ?= $button-background-color
-$post-navigation-fg ?= $grey
-
 .pagination
     @extend .pagination.is-centered
     margin-top: 1.5rem
+    background-color: #1e1e1e
 
-    .pagination-link,
-    .pagination-ellipsis,
     .pagination-previous,
-    .pagination-next
-        a
-            color: $pagination-color
-    .pagination-link,
-    .pagination-previous,
-    .pagination-next
-        border: none
-        background: $pagination-background-color
-        box-shadow: $pagination-box-shadow
-    .pagination-link.is-current
-        background: $pagination-current-background-color
+    .pagination-next,
+    .pagination-link
+        background-color: #1e1e1e
+        color: #e4e4e4
+        border-color: #333
+
+        &:hover
+            color: #55aaff
+            background-color: #2c2c2c
+            border-color: #55aaff
+
+    .pagination-link
+        &.is-current
+            background-color: #55aaff
+            border-color: #55aaff
+            color: #ffffff
+
+            &:hover
+                background-color: #77bbff
+                border-color: #77bbff
 
 .post-navigation
     color: $post-navigation-fg

@@ -10,12 +10,12 @@ $searchbox-breakpoint-height ?= 479px
 $searchbox-box-shadow ?= $card-shadow
 $searchbox-border-radius ?= $radius
 $searchbox-bg-overlay ?= $modal-background-background-color
-$searchbox-bg-container ?= $white-ter
+$searchbox-bg-container ?= #1F1F1F
 $searchbox-border ?= $border
 // header styles
-$searchbox-bg-input ?= $white
+$searchbox-bg-input ?= #2C2C2C
 $searchbox-bg-close-hover ?= $searchbox-bg-container
-$searchbox-bg-close-active ?= $grey-lighter
+$searchbox-bg-close-active ?= #2C2C2C
 // body styles
 $searchbox-fg-result-header ?= $grey-light
 $searchbox-fg-result-item-secondary ?= $grey-light
@@ -195,8 +195,77 @@ $searchbox-bg-pagination-item-disabled ?= $searchbox-bg-container
             .searchbox-pagination-link:hover
                 background-color: $searchbox-bg-pagination-item-hover
 
+    &.dark
+        .searchbox-container
+            background-color: rgba(0, 0, 0, 0.8)
+            
+        .searchbox-header
+            background-color: #1e1e1e
+            border-bottom: 1px solid #333
+            
+        .searchbox-input-container
+            margin-right: 1rem
+            
+        .searchbox-input
+            color: #e4e4e4
+            background-color: #2c2c2c
+            border: 1px solid #333
+            border-radius: 4px
+            
+            &::placeholder
+                color: #7a7a7a
+                
+            &:focus
+                outline: none
+                border-color: #55aaff
+                box-shadow: 0 0 0 2px rgba(85, 170, 255, 0.2)
+                
+        .searchbox-close
+            color: #e4e4e4
+            transition: all 0.3s ease
+            
+            &:hover
+                color: #ff3860
+                background-color: rgba(255, 56, 96, 0.1)
+                
+            &:active
+                color: #ff3860
+                background-color: rgba(255, 56, 96, 0.2)
+                
+        .searchbox-body
+            background-color: #1e1e1e
+            
+            .search-result-item
+                padding: 0.75rem
+                margin-bottom: 0.5rem
+                background-color: #2c2c2c
+                border: 1px solid #333
+                border-radius: 4px
+                
+                &:hover
+                    background-color: #3a3a3a
+                    border-color: #55aaff
+                    
+                .title
+                    color: #e4e4e4
+                    font-size: 1.1rem
+                    margin-bottom: 0.5rem
+                    
+                    &:hover
+                        color: #55aaff
+                        
+                .content
+                    color: #a0a0a0
+                    font-size: 0.9rem
+                    
+        .no-result
+            color: #a0a0a0
+            text-align: center
+            padding: 2rem
+
 @media screen and (max-width: $searchbox-breakpoint-width), screen and (max-height: $searchbox-breakpoint-height)
     .searchbox .searchbox-container
+        background-color: #1e1e1e
         top: 0
         left: 0
         width: 100%

@@ -14,10 +14,12 @@
                 align-items: flex-start
 
         .tag
+            background-color: #3a3a3a
             background: $light-grey
             color: $white-invert
 
     .tags
+        // background-color: #3a3a3a
         .tag:first-child
             background: $primary
             color: $primary-invert
@@ -25,6 +27,8 @@
         .tag:last-child
             background: $light-grey
             color: $white-invert
+        .tag:not(body)
+            background-color: #3a3a3a
 
 .level.is-multiline
     flex-wrap: wrap
